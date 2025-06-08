@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resto Linktree</title>
+  </head>
+  <body>
+    <section>
+      <main>
+        <img src="profile.jpeg" alt="" />
+        <h2>Resto Maulana</h2>
+        <h3>UT Bandung - 055519076</h3>
+        <a href="https://www.instagram.com/restosavior/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i>Instagram</a
+        >
+        <a href="https://www.facebook.com/restosavior/" target="_blank"
+          ><i class="fa-brands fa-facebook"></i>Facebook</a
+        >
+        <a href="https://www.linkedin.com/in/restomaulana/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
+        >
+        <button class="call-btn" id="callbtn">Call Me</button>
+      </main>
+      <footer>
+        <p>Made with ❤ by <a href="">Resto Maulana</a></p>
+      </footer>
+    </section>
+    <script>
+      let callbtn = document.getElementById("callbtn");
+      callbtn.addEventListener("click", (event) => {
+        let btn = event.target;
+        btn.classList.add("clicked");
+        btn.textContent = "";
+
+        setTimeout(() => {
+          btn.classList.remove("clicked");
+          btn.textContent = "Call Me";
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
